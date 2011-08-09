@@ -1,0 +1,19 @@
+
+development:
+  adapter: mysql
+  database: refinery_development
+  username: root
+  password: admin
+
+test: &test
+  adapter: mysql
+  database: refinery_development
+  username: root
+  password: admin
+
+production: &production
+  adapter: mysql2
+  host: localhost
+  database: your_production_database
+  username: your_production_database_login
+  password: your_production_database_password
