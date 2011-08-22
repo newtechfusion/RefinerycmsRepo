@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<%= render :partial => "/shared/html_tag" %>
-  <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<%= stylesheet_link_tag 'base' %>
+<%= stylesheet_link_tag 'style' %>
+<!--[if IE 6]><script type="text/javascript" src="js/pngfix.js"></script><![endif]-->
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="function.js"></script>
+<script type="text/javascript" src="cufon-yui.js"></script>
+<script type="text/javascript" src="fonts/Century_Gothic_700.font.js"></script>
+<script type="text/javascript" src="fonts/Rockwell_400.font.js"></script>
+<script type="text/javascript">
+	Cufon.replace(['.topmenu span','.sign span','.searchbar .text','.welcome .left b','.slider .title','.textbox p.tt b', '.textbox p b'], {
+		hover: true,
+		fontFamily: 'Century Gothic'
+	});
+	Cufon.replace(['.blog h1','.blog h3','.routes','.video_list h3'], {
+		hover: true,
+		fontFamily: 'Rockwell'
+	});
+</script>
+</head>
+
+
+
+<%#= render :partial => "/shared/html_tag" %>
+  <%# site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
   <%= render :partial => "/shared/head" %>
-  <body>
-    <%= site_bar -%>
-    <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+  <body class="inner_bg">
+    <%#= site_bar -%>
+    <%#= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
       <header>
         <%= render :partial => "/shared/header" -%>
@@ -12,6 +40,7 @@
       <section id='page'>
         <%= yield %>
       </section>
+
       <footer>
         <%= render :partial => "/shared/footer" -%>
       </footer>

@@ -1,15 +1,16 @@
-
-development:
-  adapter: mysql
-  database: refinery_development
+login: &login
+  adapter: mysql2
+  host: localhost
   username: root
-  password: admin
+  password:
+
+development: &development
+  database: your_local_database
+  <<: *login
 
 test: &test
-  adapter: mysql
-  database: refinery_development
-  username: root
-  password: admin
+  database: your_test_database
+  <<: *login
 
 production: &production
   adapter: mysql2

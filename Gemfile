@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'rake' , '0.8.7'
+gem 'rake' , '0.9.2'
 gem 'mysql'
 gem 'refinerycms-page-images', '~> 1.0'
 gem 'refinerycms-vimeo-videos'
@@ -52,10 +52,10 @@ end
 # Specify additional Refinery CMS Engines here (all optional):
 # gem 'refinerycms-inquiries',    '~> 1.0'
 # gem "refinerycms-news",         '~> 1.2'
-# gem 'refinerycms-blog',         '~> 1.6'
+ gem 'refinerycms-blog',         '~> 1.6.1'
 # gem 'refinerycms-page-images',  '~> 1.0'
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         '~> 1.0.0'
-
+#gem 'refinerycms-theming'
 # END USER DEFINED

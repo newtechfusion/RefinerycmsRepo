@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { margin: 0px; color: #666666; -webkit-text-size-adjust: none; font: 12px Arial, Helvetica, sans-serif; background: url(../images/body_bg.png) repeat-x; }
+ul,li { margin: 0px; padding: 0px; list-style: none; }
+h1,h2,h3,h4,h5,h6 { margin: 0px; }
+img { border: medium none; }
+p { margin: 0px; }
+a { color: #666666; text-decoration: none; } 
+a,input { outline: none; }
+a,input { star:expression(this.onFocus=this.blur()); }
+input,select,textarea { font: 12px Arial, Helvetica, sans-serif; color: #666666; }
+
+.left { float: left; }
+.right { float: right; }
+.center { text-align: center; }
+.clear { clear: both; height: 0px; font-size: 0px; line-height: 0px; }
+
+.inner_bg { background: url(../images/body_bg2.png) repeat-x; }
+
+
+.header { width: 945px; margin: 0px auto; }
+
+	.topbar { height: 36px; font-weight: bold; }
+		.topbar .icon { width: 324px; padding: 1px 0px 0px 26px; float: left; }
+		.topbar .text { padding-top: 10px; color: #F7931E; float: left; }
+		.topbar .link { padding-top: 10px; float: right; }
+		.topbar .link a { margin-left: 12px; color: #FFF; }
+		.topbar .link a:hover { text-decoration: underline; }
+		
+	.toolbar { height: 83px; position: relative; }
+		.toolbar .logo { position: absolute; left: 0px; top: 28px; }
+		.toolbar .accmenu { position: absolute; top: 7px; right: -5px; font-weight: bold; }
+			.toolbar .accmenu a { line-height: 28px; font-size: 14px; float: left; color: #71A8CF; }
+			.toolbar .accmenu a:hover { color: #8acdfd; }
+			.toolbar .accmenu a.acc { width: 117px; height: 30px; margin-left: 14px; background: url(../images/account_but.png); }
+			.toolbar .accmenu a.acc:hover { background-position: 0px -30px; }
+			.toolbar .accmenu span { color: #71A8CF; line-height: 28px; margin: 0px 5px; float: left; }
+		.toolbar .topmenu { position: absolute; right: 0px; bottom: 0px; font-family: Century Gothic; }
+			.toolbar .topmenu a { height: 30px; padding: 10px 15px 0px 15px; margin-left: 1px; float: left; color: #FFF; font-size: 16px; }
+			.toolbar .topmenu a:hover, .toolbar .topmenu .current { background: #243542; color: #C6DCEC; }
+	
+	.sign { height: 80px; }
+		.sign span { font-size: 20px; color: #AACBE2; float: left; margin-top: 38px; }
+		.sign a { width: 258px; height: 55px; margin-top: 15px; float: right; background: url(../images/sign_but.gif); }
+		.sign a:hover { background-position: 0px -55px; }
+
+
+.content { width: 945px; margin: 0px auto; }
+	.conleft { width: 645px; padding-top: 30px; float: left; }
+	.conright { width: 300px; padding-top: 30px; float: right; }
+	.routes { height: 45px; padding-top: 5px; color: #FFF; font-size: 42px; }
+	
+	.partner { text-align: right; }
+	
+.footer { width: 902px; height: 44px; background: url(../images/footer_bg.gif) no-repeat left center; margin: 0px auto; padding: 30px 20px; }
+	.footer .left { padding-top: 15px; }
+	.footer .left a { height: 17px; margin-right: 18px; line-height: 17px; padding-left: 22px; background: url(../images/footer_icons.gif) no-repeat; display: inline-block; }
+	.footer .right { padding-top: 15px; }
+	.footer .right span { margin: 0px 5px; }
+	.footer a:hover { text-decoration: underline; }
