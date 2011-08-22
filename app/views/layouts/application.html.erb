@@ -8,11 +8,14 @@
 <%= stylesheet_link_tag 'base' %>
 <%= stylesheet_link_tag 'style' %>
 <!--[if IE 6]><script type="text/javascript" src="js/pngfix.js"></script><![endif]-->
-<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="function.js"></script>
-<script type="text/javascript" src="cufon-yui.js"></script>
-<script type="text/javascript" src="fonts/Century_Gothic_700.font.js"></script>
-<script type="text/javascript" src="fonts/Rockwell_400.font.js"></script>
+
+<%= javascript_include_tag '/javascripts/jquery-1.6.2.min.js' %>
+<%= javascript_include_tag '/javascripts/function.js' %>
+<%= javascript_include_tag '/javascripts/cufon-yui.js' %>
+<%= javascript_include_tag '/javascripts/cufon-yui.js' %>
+<%= javascript_include_tag '/javascripts/fonts/Century_Gothic_700.font.js' %>
+<%= javascript_include_tag '/javascripts/fonts/Rockwell_400.font.js' %>
+
 <script type="text/javascript">
 	Cufon.replace(['.topmenu span','.sign span','.searchbar .text','.welcome .left b','.slider .title','.textbox p.tt b', '.textbox p b'], {
 		hover: true,
@@ -29,7 +32,7 @@
 
 <%#= render :partial => "/shared/html_tag" %>
   <%# site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
-  <%= render :partial => "/shared/head" %>
+  <%#= render :partial => "/shared/head" %>
   <body class="inner_bg">
     <%#= site_bar -%>
     <%#= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
