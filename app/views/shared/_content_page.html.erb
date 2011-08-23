@@ -1,108 +1,4 @@
-
-<div class="content">
-
-	<div class="bannerbox">
-		<div class="slider">
-			<div class="title">Featured Updates</div>
-			<div class="tab_imgs">
-				<ul>
-					<li style="display:block"><img src="images/slider_img1.jpg" /></li>
-					<li><img src="images/slider_img2.jpg" /></li>
-					<li><img src="images/slider_img3.jpg" /></li>
-					<li><img src="images/slider_img2.jpg" /></li>
-				</ul>
-			</div>
-			<div class="tab_menu">
-				<a href="javascript:void(0);" class="active">
-					<img src="images/slider_thumb_img1.jpg" align="left" />
-					<p><span>Myfinancialfit.com</span><br />Financial Aid Tools</p>
-				</a>
-				<a href="javascript:void(0);">
-					<img src="images/slider_thumb_img2.jpg" align="left" />
-					<p><span>Tips for Saving Money</span><br />Financial Aid Process</p>
-				</a>
-				<a href="javascript:void(0);">
-					<img src="images/slider_thumb_img3.jpg" align="left" />
-					<p><span>MCC Documentary</span><br />Financial Aid Tools</p>
-				</a>
-				<a href="javascript:void(0);">
-					<img src="images/slider_thumb_img4.jpg" align="left" />
-					<p><span>Tips for Saving Money</span><br />Financial Aid Process</p>
-				</a>
-			</div>
-		</div>
-		<div class="searchbar">
-			<div class="text">Explore</div>
-			<div class="search">
-				<input type="text" value="Explore topics and titles..." />
-				<a href="javascript:void(0);">&nbsp;</a>
-			</div>
-			<div class="view"><a href="javascript:void(0);">&nbsp;</a></div>
-		</div>
-	</div>
-
-	<div class="welcome">
-		<div class="left">
-			<p>
-				<span>JANUARY 26, 2010</span><br />
-				<b>WELCOME TO MANAGINGCOLLEGECOST.COM</b><br />
-				Cras nec enim sed dolor tempus cursus. Duis vel libero urna, eget auctor arcu. Aliquam molestie tortor ac odio convallis pellentesque. Aenean hendrerit fringilla dictum. Aenean eget purus tellus. Praesent Anc  congue magna. Aliquam sit amet ante sit amet enim pretium scelerisque. Donec quis augue nulla. Proin non enim sed leo auctor ornare.
-			</p>
-			<p><a href="javascript:void(0);" class="sign">&nbsp;</a></p>
-		</div>
-		<div class="right">
-			<img src="images/welcome_vido.gif" width="342" height="165" />
-		</div>
-	</div>
-
-	<div class="conleft">
-		<div class="blog">
-			<h1><span>from the blog</span><a href="javascript:void(0);">»view all posts</a></h1>
-			<table cellpadding="0" cellspacing="0" width="100%">
-				<tr>
-					<td width="50%">
-						<span>JANUARY 26, 2010</span>
-						<h3>This is what a blog post will look like its cool.</h3>
-						<p>Cras nec enim sed dolor tempus cursus. Duis vel libero urna, eget auctor arcu. Aliquam molestie tortor ac odio convallis pellentesque. Aenean hendrerit fringilla dictum. Aenean eget purus tellus. Praesent ac congue magna. </p>
-						<p>Aliquam sit amet ante sit amet enim pretium scelerisque. nascetur ridiculus mus. Aliquam ut neque libero. Ut neque libero, ut lobortis dui. Vivamus elementum dui sit.</p>
-					</td>
-					<td width="50%">
-						<span>JANUARY 26, 2010</span>
-						<h3>This is what a blog post will look like its cool.</h3>
-						<p>Cras nec enim sed dolor tempus cursus. Duis vel libero urna, eget auctor arcu. Aliquam molestie tortor ac odio convallis pellentesque. Aenean hendrerit fringilla dictum. Aenean eget purus tellus. Praesent ac congue magna. </p>
-						<p>Aliquam sit amet ante sit amet enim pretium scelerisque. nascetur ridiculus mus. Aliquam ut neque libero. Ut neque libero, ut lobortis dui. Vivamus elementum dui sit.</p>
-					</td>
-				</tr>
-				<tr>
-					<td width="50%">
-						<span>JANUARY 26, 2010</span>
-						<h3>This is what a blog post will look like its cool.</h3>
-						<p>Cras nec enim sed dolor tempus cursus. Duis vel libero urna, eget auctor arcu. Aliquam molestie tortor ac odio convallis pellentesque. Aenean hendrerit fringilla dictum. Aenean eget purus tellus. Praesent ac congue magna. </p>
-						<p>Aliquam sit amet ante sit amet enim pretium scelerisque. nascetur ridiculus mus. Aliquam ut neque libero. Ut neque libero, ut lobortis dui. Vivamus elementum dui sit.</p>
-					</td>
-					<td width="50%">
-						<span>JANUARY 26, 2010</span>
-						<h3>This is what a blog post will look like its cool.</h3>
-						<p>Cras nec enim sed dolor tempus cursus. Duis vel libero urna, eget auctor arcu. Aliquam molestie tortor ac odio convallis pellentesque. Aenean hendrerit fringilla dictum. Aenean eget purus tellus. Praesent ac congue magna. </p>
-						<p>Aliquam sit amet ante sit amet enim pretium scelerisque. nascetur ridiculus mus. Aliquam ut neque libero. Ut neque libero, ut lobortis dui. Vivamus elementum dui sit.</p>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</div>
-
-	<div class="conright">
-
-		<div class="partner">
-			<img src="images/partners_img.jpg" />
-		</div>
-
-	</div>
-
-	<div class="clear"></div>
-
-</div>
-<%#
+<%
   # provide a default array for collecting CSS for sections
   css = []
 
@@ -152,19 +48,39 @@
     dom_id = section[:id] || section[:yield]
     if section[:html].present?
       if section[:title]
-        section[:html] = "<h1 id='#{dom_id}'>#{section[:html]}</h1>".html_safe
+        # section[:html] = "<div class=\"routes\">#{section[:html]}</div>".html_safe
       else
-        section[:html] = "<section id='#{dom_id}'><div class='inner'>#{section[:html]}</div></section>".html_safe
+        # section[:html] = "<div class=\"conleft\"><div class=\"textbox\">#{section[:html]}</div></div>".html_safe
       end
     else
       css << "no_#{dom_id}"
     end
   end
 -%>
-<!--
 
-<section id='body_content'<#%= " class='#{css.join(' ')}'" if css.present? %>>
-  <%#= raw sections.map{|section| section[:html]}.join("\n") -%>
-</section>
-<%#@= render :partial => '/shared/draft_page_message' unless @page.nil? or @page.live? -%>
--->
+<div class="routes">
+<% sections.each do |section| %>
+	<% if section[:title] %>
+		<%= raw section[:html] %>
+	<% end %>
+<% end %>
+</div>
+
+<div class="conleft">
+	<div class="textbox">
+<% sections.each do |section| %>
+	<% if !section[:title] %>
+		<%= raw section[:html] %>
+	<% end %>
+<% end %>
+	</div>
+</div>
+
+<div class="conright">
+	<div class="right_video">
+		<img src="images/right_video.jpg" width="286" height="138" />
+	</div>
+	<div class="partner">
+		<img src="images/partners_img.jpg" />
+	</div>
+</div>
