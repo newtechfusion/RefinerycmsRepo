@@ -9,35 +9,23 @@
 	</div>
 
 	<div class="toolbar">
-		<a href="javascript:void(0);" class="logo"><img src="images/logo.png" /></a>
+		<a href="<%= root_url %>" class="logo"><img src="images/logo.png" /></a>
 		<div class="accmenu">
-			<a href="javascript:void(0);">Sign Up</a>
-			<span>|</span>
-			<a href="javascript:void(0);">Sign In</a>
-			<a href="javascript:void(0);" class="acc"></a>
+			<% if user_signed_in? %>
+				<%= link_to "", edit_user_registration_path, :class => "acc" %>
+			<% else %>
+				<%= link_to "Sign Up", new_user_registration_path %>
+				<span>|</span>
+				<%= link_to "Sign In", new_user_session_path %>
+			<% end %>
 		</div>
-		<div class="topmenu">
-			<a href="index.html"><span>Home</span></a>
-			<a href="video.html"><span>Videos</span></a>
-			<a href="blog.html"><span>Blog</span></a>
-			<a href="javascript:void(0);"><span>Resources</span></a>
-			<a href="javascript:void(0);"><span>Events</span></a>
-			<a href="contact.html"><span>Contact</span></a>
-		</div>
+		<%= render :partial => 'shared/menu' %>
 	</div>
 
 	<div class="sign">
 		<span>The college website for parents.</span>
-		<a href="javascript:void(0);"></a>
+		<%= link_to "", new_user_registration_path %>
 	</div>
 
 </div>
-
-
-<h1 id='logo'>
-  <%#= link_to RefinerySetting.find_or_set(:site_name, "Company Name"), root_path %>
-</h1>
-<%#= render(:partial => "/shared/menu", :locals => {
-             :dom_id => 'menu',
-             :css => 'menu'
-           }) %>
+<!-- End header -->

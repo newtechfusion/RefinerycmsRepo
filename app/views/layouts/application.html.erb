@@ -4,7 +4,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title><%= browser_title(yield(:title)) %></title>
 <%= stylesheet_link_tag 'base' %>
 <%= stylesheet_link_tag 'style' %>
 <!--[if IE 6]><script type="text/javascript" src="js/pngfix.js"></script><![endif]-->
@@ -28,26 +28,18 @@
 </script>
 </head>
 
+<body>
 
+<%= render :partial => "/shared/header" -%>
 
-<%#= render :partial => "/shared/html_tag" %>
-  <%# site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
-  <%#= render :partial => "/shared/head" %>
-  <body class="inner_bg">
-    <%#= site_bar -%>
-    <%#= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
-      <header>
-        <%= render :partial => "/shared/header" -%>
-      </header>
-      <section id='page'>
-        <%= yield %>
-      </section>
+<!-- content -->
+<div class="content">
+	<%= yield %>
+</div>
+<!-- End content -->
 
-      <footer>
-        <%= render :partial => "/shared/footer" -%>
-      </footer>
-    </div>
-    <%= render :partial => "/shared/javascripts" %>
-  </body>
+<%= render :partial => "/shared/footer" -%>
+<%= render :partial => "/shared/javascripts" %>
+
+</body>
 </html>
