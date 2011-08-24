@@ -1,4 +1,9 @@
 Refinerynew::Application.routes.draw do
+
+  devise_for :users, :as => '', :path_names => { :sign_up => 'signup'} do
+    match "signup" => "devise/registrations#new", :as => :registration
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
