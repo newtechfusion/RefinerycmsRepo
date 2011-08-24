@@ -2,7 +2,7 @@
 #   gem install sqlite3
 development:
   adapter: mysql
-  database: refinery_development
+  database: refinery_developmentnew
   username: root
   password: admin
 
@@ -11,12 +11,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: mysql
-  database: refinery_development
+  database: refinery_developmentnew
   username: root
   password: admin
 
 production:
   adapter: mysql
-  database: refinery_development
+  database: refinery_developmentnew
   username: root
   password: admin
