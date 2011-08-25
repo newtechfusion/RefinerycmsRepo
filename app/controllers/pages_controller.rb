@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-    before_filter :find_all_blog_posts, :except => [:archive], :only => [:home]
-    before_filter :find_blog_post, :only => [:home]
-    before_filter :find_tags, :only => [:home]
+#    before_filter :find_all_blog_posts, :only => [:home]
+#    before_filter :find_blog_post, :except => [:show]
+#    before_filter :find_tags, :only => [:home]
 
-#    before_filter :find_all_blog_posts, :except => [:archive], :only => [:home]
-#    before_filter :find_blog_post, :only => [:show, :comment, :update_nav]
-#    before_filter :find_tags
+    before_filter :find_all_blog_posts, :except => [:archive], :only => [:home]
+    before_filter :find_blog_post, :only => [:comment, :update_nav]
+    before_filter :find_tags
 
   respond_to :html, :js, :rss
   # This action is usually accessed with the root path, normally '/'
