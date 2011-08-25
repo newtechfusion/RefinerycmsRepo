@@ -13,10 +13,8 @@ class User < ActiveRecord::Base
   # :login is a virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
   attr_accessor :login
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :plugins, :login, :first_name, :last_name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :plugins, :login
 
-  validates :first_name, :presence => true
-  validates :last_name, :presence => true
   validates :username, :presence => true, :uniqueness => true
 
   class << self

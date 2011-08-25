@@ -14,7 +14,7 @@
 			<% if user_signed_in? %>
 				<%= link_to "", edit_user_registration_path, :class => "acc" %>
 			<% else %>
-				<%= link_to "Sign Up", registration_path %>
+				<%= link_to "Sign Up", new_user_registration_path %>
 				<span>|</span>
 				<%= link_to "Sign In", new_user_session_path %>
 			<% end %>
@@ -24,7 +24,7 @@
 
 	<div class="sign">
 		<span>The college website for parents.</span>
-		<%= link_to "", registration_path %>
+		<%= link_to "", new_user_registration_path %>
 	</div>
 
 </div>

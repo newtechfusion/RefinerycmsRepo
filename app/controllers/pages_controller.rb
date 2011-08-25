@@ -1,12 +1,21 @@
 class PagesController < ApplicationController
-    before_filter :find_all_blog_posts, :except => [:archive]
-    before_filter :find_blog_post, :only => [:show, :comment, :update_nav]
-    before_filter :find_tags
+    before_filter :find_all_blog_posts, :except => [:archive], :only => [:home]
+    before_filter :find_blog_post, :only => [:home]
+    before_filter :find_tags, :only => [:home]
+
+#    before_filter :find_all_blog_posts, :except => [:archive], :only => [:home]
+#    before_filter :find_blog_post, :only => [:show, :comment, :update_nav]
+#    before_filter :find_tags
 
   respond_to :html, :js, :rss
   # This action is usually accessed with the root path, normally '/'
   def home
 
+#        find_all_blog_posts
+#
+#        find_blog_post
+#
+#        find_tags
     (@blog_posts = BlogPost.live.includes(:comments, :categories).all) if request.format.rss? 
       respond_with (@blog_posts) do |format|
         format.html
@@ -41,7 +50,9 @@ class PagesController < ApplicationController
     end
   end
 
-    def find_blog_post
+
+
+  def find_blog_post
       unless (@blog_post = BlogPost.find(params[:id])).try(:live?)
         if refinery_user? and current_user.authorized_plugins.include?("refinerycms_blog")
           @blog_post = BlogPost.find(params[:id])

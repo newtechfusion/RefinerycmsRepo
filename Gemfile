@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'rake' , '0.9.2'
-gem 'mysql2', '0.2.7'
+gem 'mysql'
 gem 'refinerycms-page-images', '~> 1.0'
 gem 'refinerycms-vimeo-videos'
 
