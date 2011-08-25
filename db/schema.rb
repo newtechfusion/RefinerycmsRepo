@@ -10,7 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20110824142161) do
+=======
+ActiveRecord::Schema.define(:version => 20110825102355) do
+>>>>>>> 76e858d8f18a70a7a2988ae1a4c5f285645892fe
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -264,6 +268,8 @@ ActiveRecord::Schema.define(:version => 20110824142161) do
     t.string   "remember_token"
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"
