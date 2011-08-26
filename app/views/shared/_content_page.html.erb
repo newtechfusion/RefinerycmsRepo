@@ -69,11 +69,38 @@
 <div class="conleft">
 	<div class="textbox">
 <% sections.each do |section| %>
-	<% if !section[:title] %>
+	<%#= "11------------#{section.inspect}" %>
+        <%#= "22------------#{@page.inspect}" %>
+        <% if !section[:title] %>
 		<%= raw section[:html] %>
-	<% end %>
+
+        <% end %>
+ 
 <% end %>
-	</div>
+        </div>
+
+
+
+
+<%#=  link_to "Subpage", "3-new-sub-video" %>
+<div class="video_list">
+     		
+            <%  @page.root.children.each do |subpage| %>
+             <div class="list">
+		<ul>
+
+                <li class="video"><%= raw subpage[:video] %></li>
+
+                <li class="text"> <%= raw subpage[:body] %></li>
+             
+                 <li class="text"> <%= link_to subpage[:body].html_safe , subpage.url  %>  </li>
+                </ul>
+
+             </div>
+
+                 <% end %>
+                                
+</div>
 </div>
 
 <div class="conright">
@@ -84,3 +111,4 @@
 		<img src="images/partners_img.jpg" />
 	</div>
 </div>
+        

@@ -79,6 +79,7 @@
 	.textbox p { padding-top: 18px; }
 	.textbox p b { font-size: 14px; color: #758EA1; }
 
+.left_video { width: 294px; height: 154px; padding-top: 4px; text-align: center; float: right;  }
 .right_video { width: 294px; height: 154px; padding-top: 4px; text-align: center; float: right; background: url(../images/right_video_bg.gif); }
 .right_ad { padding: 76px 0px 25px 0px; text-align: right; }
 
